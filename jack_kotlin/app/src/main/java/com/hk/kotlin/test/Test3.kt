@@ -100,9 +100,9 @@ fun notNull (){
 fun testResource(){
 //    val stream = Files.newInputStream(Paths.get("/some/file.txt"))
 //    val stream = Files.newInputStream(Paths.get("C:\\Users\\12497\\Desktop\\test.txt"))
-//    val stream = Files.newInputStream(Paths.get("E:\\git_kotlin\\jack_kotlin\\app\\src\\main\\assets\\test.json"))
+    val stream = Files.newInputStream(Paths.get("E:\\git_kotlin\\jack_kotlin\\app\\src\\main\\assets\\test.json"))
 
-    val stream = Files.newInputStream(Paths.get("file:///android_asset/test.json"))
+//    val stream = Files.newInputStream(Paths.get("file:///android_asset/test.json"))
     stream.buffered().reader().use { reader ->
         println(reader.readText())
     }
@@ -110,7 +110,7 @@ fun testResource(){
 
 fun sumInt(a:Int ,b:Int) = a+b
 
-fun sumTT() :Boolean = 5 > 4
+fun sumTT() :Boolean = if (5 > 4) true else false
 
 fun testNotNull(){
     //!! 操作符
@@ -118,6 +118,10 @@ fun testNotNull(){
 //    ?: 如果左侧的值为空，就取右侧的值（elvis 操作符）
 //    :: 创建一个成员引用或者一个类引用
 //    .. 创建一个区间
+
+   var a :String? = null
+    println("${a ?: "jack"}") //jack
+
 
     println(sumInt(1,2))
 

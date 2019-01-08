@@ -85,6 +85,13 @@ fun maxParam (a: Int,b: Int,c:Int) = if(a >b) a else b
 //fun maxParam1(a: Int,b: Int )= (a>0)? a:b
 //kotlin中不再有Java的三目运算 取代的是 if(a >b) a else b
 
+fun yy(){
+    val  b = ""
+    val l: Int = if (b != null) b.length else -1
+    val m = b?.length ?: -1
+}
+
+
 
 //使用可空值及 null 检测
 //当某个变量的值可以为 null 的时候，必须在声明处的类型后添加 ? 来标识该引用可为空。
